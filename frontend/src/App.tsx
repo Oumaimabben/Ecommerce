@@ -7,6 +7,7 @@ import OrderTrackingPage from "./pages/Ordertracking";
 import WishlistPage from "./pages/Wishlist";
 import Showroom from "./pages/showroom";
 import OurPartner from "./pages/OurPartner";
+import Catalogue from "./pages/Catalogue";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/wishlist" element={<WishlistPage/>} />
           <Route path="/showroom" element={<Showroom/>} />
           <Route path="/partenaires" element={<OurPartner/>} />
+          <Route path="/catalogues" element={<Catalogue/>} />
 
 
 
