@@ -269,24 +269,29 @@ const showNavbar = location.pathname === "/";
         )}
 
         {/* Navigation menu */}
-        <nav className="flex items-center gap-8 ml-10 flex-grow">
-          <button className="flex items-center gap-1.5 text-gray-700 hover:text-red-600 transition-colors font-semibold py-4 group">
-            Accueil
-            <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
-          </button>
-          <button className="flex items-center gap-1.5 text-gray-700 hover:text-red-600 transition-colors font-semibold py-4 group">
-            Boutique
-            <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
-          </button>
-          <button className="flex items-center gap-1.5 text-gray-700 hover:text-red-600 transition-colors font-semibold py-4 group">
-            Nos Partenaires
-            <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
-          </button>
-          <button className="flex items-center gap-1.5 text-gray-700 hover:text-red-600 transition-colors font-semibold py-4 group">
-            Catalogues
-            <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
-          </button>
-        </nav>
+      <nav className="flex items-center gap-8 ml-10 flex-grow">
+
+  <Link to="/" className="flex items-center gap-1.5 text-gray-700 hover:text-red-600 transition-colors font-semibold py-4 group">
+    Accueil
+    <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
+  </Link>
+
+  <Link to="/showroom" className="flex items-center gap-1.5 text-gray-700 hover:text-red-600 transition-colors font-semibold py-4 group">
+    Boutique
+    <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
+  </Link>
+
+  <Link to="/partenaires" className="flex items-center gap-1.5 text-gray-700 hover:text-red-600 transition-colors font-semibold py-4 group">
+    Nos Partenaires
+    <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
+  </Link>
+
+  <Link to="/catalogues" className="flex items-center gap-1.5 text-gray-700 hover:text-red-600 transition-colors font-semibold py-4 group">
+    Catalogues
+    <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
+  </Link>
+
+</nav>
 
         {/* Top offers */}
         <div className="flex items-center gap-6 ml-auto">
