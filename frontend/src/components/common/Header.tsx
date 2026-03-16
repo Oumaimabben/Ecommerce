@@ -28,6 +28,9 @@ const Header = () => {
 const location = useLocation();
 
 const showNavbar = location.pathname === "/";
+  // vérifie si utilisateur connecté
+const isLoggedIn = !!localStorage.getItem("token")
+
   const categories = [
     { name: "Phares & Éclairage", icon: <Lightbulb className="w-5 h-5" /> },
     { name: "Accessoires Intérieurs", icon: <Car className="w-5 h-5" /> },
@@ -205,15 +208,30 @@ const showNavbar = location.pathname === "/";
 
             {/* Right section */}
             <div className="flex items-center gap-3">
-              <div className="hidden md:flex items-center gap-2 cursor-pointer hover:text-red-600 transition-colors px-3 py-2 rounded-lg hover:bg-red-50">
-                <User className="w-5 h-5" />
-                <div className="text-sm">
-                  <div className="font-semibold">Mon compte</div>
-                  <div className="text-xs text-gray-500">Bonjour, connectez-vous</div>
-                </div>
-                <ChevronDown className="w-4 h-4" />
-              </div>
+            {/* MON COMPTE */}
 
+<Link
+to={isLoggedIn ? "/profile" : "/auth"}
+className="hidden md:flex items-center gap-2 hover:text-red-600 px-3 py-2 rounded-lg hover:bg-red-50"
+>
+
+<User className="w-5 h-5" />
+
+<div className="text-sm">
+
+<div className="font-semibold">
+Mon compte
+</div>
+
+<div className="text-xs text-gray-500">
+{isLoggedIn ? "Voir mon profil" : "Bonjour, connectez-vous"}
+</div>
+
+</div>
+
+<ChevronDown className="w-4 h-4" />
+
+</Link>
               <button className="relative p-2.5 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all">
                 <Heart className="w-6 h-6" />
                 <span className="absolute -top-1 -right-1 bg-gradient-to-r from-red-600 to-red-700 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold shadow-md">
