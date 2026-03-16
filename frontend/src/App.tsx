@@ -8,6 +8,7 @@ import WishlistPage from "./pages/Wishlist";
 import Showroom from "./pages/showroom";
 import OurPartner from "./pages/OurPartner";
 import Catalogue from "./pages/Catalogue";
+import UserProfile from "./components/profile/userProfile";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
           <Route path="/showroom" element={<Showroom/>} />
           <Route path="/partenaires" element={<OurPartner/>} />
           <Route path="/catalogues" element={<Catalogue/>} />
-
+          <Route path="/profile" element={<UserProfile />} />
 
 
           
